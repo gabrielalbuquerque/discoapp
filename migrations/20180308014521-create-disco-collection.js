@@ -14,14 +14,6 @@ module.exports = {
       description: {
         type: Sequelize.STRING
       },
-      discoId:{
-        type: Sequelize.INTEGER,
-        references: {
-            model: 'Discos',
-            key: 'id'
-          },
-          allowNull: false
-      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

@@ -2,26 +2,61 @@ var models  = require('../models');
 var express = require('express');
 var router = express.Router();
 
-router.get('/discos', function(req, res) {
+// get all discos
+router.get('/getdiscos', function(req, res) {
   models.Disco.findAll().then(function(discos) {
     res.json(discos);
   });
 });
 
-router.post('/disco', function(req, res){
+// get discos by collection id
+router.get('getdiscos/:discocollection_id', function(req, res){
+  models.Disco.findAll({
+    where: {
+      discoCollectionId: req.params.discocollection_id
+    }
+  }).then(function(discos) {
+    res.json(discos);
+  });
+});
+
+// create disco
+router.post('/createdisco/:discocollection_id', function(req, res){
   models.Disco.create({
     name: req.body.name,
-    description: req.body.description
+    description: req.body.description,
+    discoCollectionId: req.params.discocollection_id
   }).then(function() {
     res.json({msg: 'Disco adicionado com sucesso!'});
   });
 });
 
-router.delete('/disco/:id', function(req, res){
-  models.Disco.findById(req.params.id).then(function(disco) {
-    disco.destroy().then(function(){
-      res.json({msg: 'Disco removido com sucesso!'});
-    });
+// update disco
+router.post('/updatedisco/:id', function(req, res){
+  models.Disco.find({
+    where: {
+      id: req.params.id
+    }
+  }).then(function(disco) {
+    if(disco){
+      disco.updateAttributes({
+          name: req.body.name,
+          description: req.body.description,
+        }).then(function() {
+          res.json({msg: 'Disco atualizado com sucesso!'});
+        });
+    }
+  });
+});
+
+// delete disco
+router.delete('/deletedisco/:id', function(req, res){
+  models.Disco.destroy({
+    where: {
+      id: req.params.id
+    }
+  }).then(function() {
+    res.json({msg: 'Disco removido com sucesso!'});
   });
 });
 

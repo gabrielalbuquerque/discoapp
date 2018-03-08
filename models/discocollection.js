@@ -5,7 +5,7 @@ module.exports = (sequelize, DataTypes) => {
     description: DataTypes.STRING
   }, {});
   DiscoCollection.associate = function(models) {
-    DiscoCollection.hasMany(models.Disco, {foreignKeyConstraint: true});
+      models.DiscoCollection.hasMany(models.Disco, { foreignKey: 'discoCollectionId' });
   };
   return DiscoCollection;
 };

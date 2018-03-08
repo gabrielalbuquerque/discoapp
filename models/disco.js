@@ -5,7 +5,7 @@ module.exports = (sequelize, DataTypes) => {
     description: DataTypes.STRING
   }, {});
   Disco.associate = function(models) {
-    // associations can be defined here
+    models.Disco.belongsTo(models.DiscoCollection, { foreignKey: 'discoCollectionId', onDelete: 'cascade', hooks: true });
   };
   return Disco;
 };

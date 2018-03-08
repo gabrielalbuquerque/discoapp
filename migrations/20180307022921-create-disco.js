@@ -14,6 +14,14 @@ module.exports = {
       description: {
         type: Sequelize.STRING
       },
+      discoCollectionId: {
+       type: Sequelize.INTEGER,
+       references: {
+         onDelete: "CASCADE",
+         model: 'DiscoCollections',
+         key: 'id'
+       }
+     },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
