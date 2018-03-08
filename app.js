@@ -8,6 +8,7 @@ var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
 var disco = require('./routes/disco');
+var discoCollection = require('./routes/discocollection');
 
 var app = express();
 
@@ -26,9 +27,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// routes
 app.use('/', index);
 app.use('/api', disco);
-//app.use('/users', users);
+app.use('/api', discoCollection);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -49,7 +51,7 @@ app.use(function(err, req, res, next) {
 });
 
 app.listen(port, function(){
-  console.log('running');
+  console.log('Server up and running.');
 });
 
 module.exports = app;
