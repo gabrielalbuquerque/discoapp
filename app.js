@@ -51,7 +51,7 @@ app.use(function(err, req, res, next) {
 });
 
 app.listen(port, function(){
-  console.log('Server up and running.');
+  console.log('Server is up and running.');
 });
 
 module.exports = app;

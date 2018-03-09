@@ -9,8 +9,21 @@ router.get('/getdiscos', function(req, res) {
   });
 });
 
-// get discos by collection id
-router.get('getdiscos/:discocollection_id', function(req, res){
+// search discos
+router.get('/searchdiscos/:search_char', function(req, res){
+  models.Disco.findAll({
+    where: {
+      name: {
+        $like: '%'+req.params.search_char+'%'
+      }
+    }
+  }).then(function(discos) {
+      res.json(discos);
+  });
+});
+
+// get discos by collection
+router.get('/getdiscos/:discocollection_id', function(req, res){
   models.Disco.findAll({
     where: {
       discoCollectionId: req.params.discocollection_id
