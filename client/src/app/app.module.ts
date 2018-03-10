@@ -4,12 +4,14 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { DiscosComponent } from './discos/discos.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    DiscosComponent
+    DiscosComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

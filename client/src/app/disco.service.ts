@@ -9,7 +9,7 @@ export class DiscoService {
   constructor(private http: HttpClient) { }
 
   getDiscos(){
-    return this.http.get<Disco[]>('http://localhost:3000/api/discos');
+    return this.http.get<Disco[]>('http://localhost:3000/api/getdiscos');
   }
 
   addDisco(newDisco){
