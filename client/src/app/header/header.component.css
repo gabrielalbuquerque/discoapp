@@ -1,0 +1,29 @@
+.navbar-disco{
+  background: #8C8;
+  padding: 0 !important;
+}
+
+.navbar-nav-disco{
+  padding-left: 20px !important;
+}
+
+.nav-item-disco {
+  padding: 18px !important;
+}
+
+.nav-item-disco:hover {
+  background: #E5A;
+  color: white;
+}
+
+.navbar-brand-disco{
+  margin-right: 0px !important;
+}
+
+.navbar-light .navbar-brand-disco {
+    color: white !important;
+}
+
+.navbar-light .navbar-nav-disco .nav-link{
+  color: white !important;
+}
