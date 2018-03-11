@@ -10,7 +10,7 @@ import {Disco} from '../disco';
   providers: [DiscoService]
 })
 export class AddDiscoComponent implements OnInit {
-  myform: FormGroup;
+  addDiscoForm: FormGroup;
 
   disco: Disco = new Disco();
   discoCollectionId: string;
@@ -18,11 +18,11 @@ export class AddDiscoComponent implements OnInit {
   constructor(private discoService: DiscoService) { }
 
   addDisco(){
-    this.discoService.addDisco(this.myform.value);
+    this.discoService.addDisco(this.addDiscoForm.value);
   }
 
   ngOnInit() {
-    this.myform = new FormGroup({
+    this.addDiscoForm = new FormGroup({
        name: new FormControl(),
        description: new FormControl()
     });

@@ -9,7 +9,7 @@
   <div class="spacer20"></div>
   <div class="row">
     <div class="col col-lg-6">
-      <form [formGroup]="myform" novalidate (ngSubmit)="addDisco()">
+      <form [formGroup]="addDiscoForm" novalidate (ngSubmit)="addDisco()">
         <div class="form-group">
           <label for="nome">Nome</label>
           <input type="text" formControlName="name" name="name" class="form-control form-disco" id="nome" placeholder="Nome">

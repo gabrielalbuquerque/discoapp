@@ -29,8 +29,8 @@ export class DiscoService {
     this.httpClient.post<Disco>('http://localhost:3000/api/updatedisco/'+id, disco, { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) }).subscribe();
   }
 
-  deleteDisco(id){
-    return this.httpClient.delete('http://localhost:3000/api/deletedisco/'+id , { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) }).subscribe();
+  deleteDisco(id, disco){
+    return this.httpClient.delete<Disco>('http://localhost:3000/api/deletedisco/'+id, { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) });
   }
 
 }
