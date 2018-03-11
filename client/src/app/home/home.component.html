@@ -4,7 +4,7 @@
     <p class="symbol">{{disco.id}}</p>
     <p class="number">80</p>
     <p class="weight">200.59</p>
-    <button [routerLink]="['/editDisco', disco.id]" type="button" class="btn btn-primary">Primary</button>
-    <input type="button" (click)="deleteDisco(disco.id, disco)" value="Delete" class="btn btn-primary"/>
+    <button [routerLink]="['/editDisco', disco.id]" class="btn btn-primary">Editar</button>
+    <button (click)="deleteDisco(disco.id, disco)" class="btn btn-primary">Remover</button>
   </div>
 </div>

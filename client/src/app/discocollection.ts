@@ -1,6 +1,5 @@
-export class Disco{
+export class DiscoCollection{
   id: string;
   name: string;
   description: string;
-  discoCollectionId: string;
 }

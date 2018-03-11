@@ -17,9 +17,11 @@
             Coleções
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Nova Coleção</a>
+            <!--a class="dropdown-item" href="#">Nova Coleção</a-->
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a>
+            <a *ngFor="let discoCollection of discoCollections" [routerLink]="['/collectionFilter', discoCollection.id]" class="dropdown-item">
+              {{discoCollection.name}}
+            </a>
           </div>
         </li>
         <li class="nav-item-disco nav-item" routerLinkActive="nav-item-disco-active">

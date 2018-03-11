@@ -25,6 +25,10 @@ const appRoutes: Routes = [
     component: HomeComponent
   },
   {
+    path: 'collectionFilter/:collecionFilterId',
+    component: HomeComponent
+  },
+  {
     path: 'addDisco',
     component: AddDiscoComponent
   },

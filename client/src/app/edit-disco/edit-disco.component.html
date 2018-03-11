@@ -18,12 +18,21 @@
           <label for="descricao">Descrição</label>
           <textarea [(ngModel)]="description" formControlName="description" name="description" class="form-control form-disco" id="descricao" placeholder="Descrição"></textarea>
         </div>
-        <!--div class="form-group">
-          <label for="nome">Coleção</label>
-          <input type="text" [(ngModel)]="discoCollectionId" name="discoCollectionId" class="form-control" id="colecao" placeholder="Coleção">
-        </div-->
+        <div class="form-group">
+          <label for="colecao">Coleção</label>
+          <select [(ngModel)]="discoCollectionId" formControlName="discoCollectionId" id="colecao" class="form-control">
+            <option *ngFor="let discoCollection of discoCollections" [ngValue]="discoCollection.id">{{discoCollection.name}}</option>
+          </select>
+        </div>
         <button type="submit" class="btn btn-primary">Enviar</button>
       </form>
+      <div class="spacer20"></div>
+      <div *ngIf="resSuccess" class="alert alert-success" role="alert">
+        {{resSuccess}}
+      </div>
+      <div *ngIf="resError" class="alert alert-danger" role="alert">
+        {{resError}}
+      </div>
     </div>
   </div>
 </div>

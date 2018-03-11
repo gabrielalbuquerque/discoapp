@@ -15,18 +15,28 @@ export class HomeComponent implements OnInit {
   constructor(private route:ActivatedRoute, private discoService: DiscoService) {
     this.route.params.subscribe(
       params =>{
-        var searchChar = params["searchChar"]
+        var searchChar = params["searchChar"];
+        var collecionFilterId = params["collecionFilterId"];
         if(searchChar){
            this.searchDiscos(searchChar);
         } else{
-          this.getDiscos();
+          if(collecionFilterId){
+            this.getDiscosByCollection(collecionFilterId);
+          } else{
+            this.getDiscos();
+          }
         }
-      })
-    );
+      });
   }
 
   getDiscos(){
     this.discoService.getDiscos()
+      .subscribe(discos =>
+      this.discos = discos);
+  }
+
+  getDiscosByCollection(collecionFilterId:string){
+    this.discoService.getDiscosByCollection(collecionFilterId)
       .subscribe(discos =>
       this.discos = discos);
   }
