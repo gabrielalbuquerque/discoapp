@@ -23,7 +23,7 @@ export class EditDiscoComponent implements OnInit {
     );
   }
 
-  loadDisco(id){
+  loadDisco(id:string){
     this.id = id;
     this.discoService.getDisco(id)
       .subscribe(disco => {

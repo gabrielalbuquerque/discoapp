@@ -8,7 +8,6 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { AddDiscoComponent } from './add-disco/add-disco.component';
-import { SearchDiscoComponent } from './search-disco/search-disco.component';
 import { EditDiscoComponent } from './edit-disco/edit-disco.component';
 
 const appRoutes: Routes = [
@@ -22,16 +21,12 @@ const appRoutes: Routes = [
     component: HomeComponent
   },
   {
+    path: 'home/:searchChar',
+    component: HomeComponent
+  },
+  {
     path: 'addDisco',
     component: AddDiscoComponent
-  },
-  {
-    path: 'searchDisco',
-    component: SearchDiscoComponent
-  },
-  {
-    path: 'searchDisco/:searchChar',
-    component: SearchDiscoComponent
   },
   {
     path: 'editDisco/:id',
@@ -45,7 +40,6 @@ const appRoutes: Routes = [
     HomeComponent,
     HeaderComponent,
     AddDiscoComponent,
-    SearchDiscoComponent,
     EditDiscoComponent
   ],
   imports: [

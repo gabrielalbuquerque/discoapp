@@ -13,23 +13,23 @@ export class DiscoService {
     return this.httpClient.get<Disco[]>('http://localhost:3000/api/getdiscos');
   }
 
-  getDisco(id){
+  getDisco(id:string){
     return this.httpClient.get<Disco>('http://localhost:3000/api/getdisco/'+id);
   }
 
-  searchDiscos(searchChar){
+  searchDiscos(searchChar:string){
     return this.httpClient.get<Disco[]>('http://localhost:3000/api/searchdiscos/'+searchChar);
   }
 
-  addDisco(newDisco){
+  addDisco(newDisco:Disco){
     this.httpClient.post<Disco>('http://localhost:3000/api/createdisco/1', newDisco, { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) }).subscribe();
   }
 
-  updateDisco(id, disco){
+  updateDisco(id:string, disco:Disco){
     this.httpClient.post<Disco>('http://localhost:3000/api/updatedisco/'+id, disco, { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) }).subscribe();
   }
 
-  deleteDisco(id, disco){
+  deleteDisco(id:string){
     return this.httpClient.delete<Disco>('http://localhost:3000/api/deletedisco/'+id, { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) });
   }
 

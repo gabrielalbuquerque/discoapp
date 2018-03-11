@@ -13,8 +13,7 @@ export class HeaderComponent implements OnInit {
   constructor(private router: Router) { }
 
   goSearch(){
-    console.log(this.searchForm.value);
-    this.router.navigate(['searchDisco', this.searchForm.value.searchChar]);
+    this.router.navigate(['home', this.searchForm.value.searchChar]);
   }
 
   ngOnInit() {
