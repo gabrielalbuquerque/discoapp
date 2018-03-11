@@ -9,8 +9,14 @@ import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { AddDiscoComponent } from './add-disco/add-disco.component';
 import { SearchDiscoComponent } from './search-disco/search-disco.component';
+import { EditDiscoComponent } from './edit-disco/edit-disco.component';
 
 const appRoutes: Routes = [
+  {
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full'
+  },
   {
     path: 'home',
     component: HomeComponent
@@ -20,13 +26,16 @@ const appRoutes: Routes = [
     component: AddDiscoComponent
   },
   {
-    path: '',
-    redirectTo: 'home',
-    pathMatch: 'full'
+    path: 'searchDisco',
+    component: SearchDiscoComponent
   },
   {
     path: 'searchDisco/:searchChar',
     component: SearchDiscoComponent
+  },
+  {
+    path: 'editDisco/:id',
+    component: EditDiscoComponent
   }
 ];
 
@@ -36,7 +45,8 @@ const appRoutes: Routes = [
     HomeComponent,
     HeaderComponent,
     AddDiscoComponent,
-    SearchDiscoComponent
+    SearchDiscoComponent,
+    EditDiscoComponent
   ],
   imports: [
     BrowserModule,

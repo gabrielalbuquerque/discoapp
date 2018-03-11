@@ -5,6 +5,28 @@
   box-shadow: none !important;
 }
 
+.addForm{
+  padding: 20px;
+  border: 1px solid #ced4da;
+}
+
+.spacer50{
+  margin-top: 50px;
+}
+
+.spacer40{
+  margin-top: 40px;
+}
+
+.spacer30{
+  margin-top: 30px;
+}
+
+.spacer20{
+  margin-top: 20px;
+}
+
+
 /* ---- isotope ---- */
 
 /* ---- .element-item ---- */

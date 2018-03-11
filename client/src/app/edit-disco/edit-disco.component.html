@@ -1,0 +1,29 @@
+<div class="container spacer50">
+  <div class="row">
+    <div class="col col-lg-12">
+      <h2 id="overview">
+        <div>Editar Disco</div>
+      </h2>
+    </div>
+  </div>
+  <div class="spacer20"></div>
+  <div class="row">
+    <div class="col col-lg-6"  >
+      <form [formGroup]="editDiscoForm" novalidate (ngSubmit)="updateDisco()">
+        <div class="form-group">
+          <label for="nome">Nome</label>
+          <input [(ngModel)]="name" type="text" formControlName="name" name="name" class="form-control form-disco" id="nome" placeholder="Nome">
+        </div>
+        <div class="form-group">
+          <label for="descricao">Descrição</label>
+          <textarea [(ngModel)]="description" formControlName="description" name="description" class="form-control form-disco" id="descricao" placeholder="Descrição"></textarea>
+        </div>
+        <!--div class="form-group">
+          <label for="nome">Coleção</label>
+          <input type="text" [(ngModel)]="discoCollectionId" name="discoCollectionId" class="form-control" id="colecao" placeholder="Coleção">
+        </div-->
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
+    </div>
+  </div>
+</div>
