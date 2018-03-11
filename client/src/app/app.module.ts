@@ -5,7 +5,6 @@ import { ReactiveFormsModule, FormsModule, FormGroup, FormControl } from '@angul
 import {Routes, RouterModule, Router} from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { DiscosComponent } from './discos/discos.component';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { AddDiscoComponent } from './add-disco/add-disco.component';
@@ -34,7 +33,6 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    DiscosComponent,
     HomeComponent,
     HeaderComponent,
     AddDiscoComponent,
