@@ -17,6 +17,10 @@
   color: white;
 }
 
+.nav-item-disco-active {
+  background: #E5A !important;
+}
+
 .navbar-brand-disco{
   margin-right: 0px !important;
 }

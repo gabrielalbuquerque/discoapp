@@ -4,9 +4,6 @@ import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Disco } from './disco';
 import 'rxjs/add/operator/map';
 
-
-
-
 @Injectable()
 export class DiscoService {
 
@@ -16,13 +13,16 @@ export class DiscoService {
     return this.httpClient.get<Disco[]>('http://localhost:3000/api/getdiscos');
   }
 
+  searchDiscos(searchChar){
+    return this.httpClient.get<Disco[]>('http://localhost:3000/api/searchdiscos/'+searchChar);
+  }
+
   addDisco(newDisco){
     this.httpClient.post<Disco>('http://localhost:3000/api/createdisco/1', newDisco, { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) }).subscribe();
   }
 
   deleteDisco(id){
-    return this.httpClient.delete('http://localhost:3000/api/deletedisco/'+id)
-      .map((res:Response) => res.json());
+    return this.httpClient.delete('http://localhost:3000/api/deletedisco/'+id , { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) }).subscribe();
   }
 
 }

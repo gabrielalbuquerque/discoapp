@@ -1,28 +1,26 @@
 import { Component, OnInit } from '@angular/core';
 import {Routes, RouterModule, Router, RouterLinkActive} from '@angular/router';
-import {DiscoService} from '../disco.service';
-import {Disco} from '../disco';
+import { ReactiveFormsModule, FormsModule, FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
-  providers: [DiscoService]
 })
 export class HeaderComponent implements OnInit {
+  searchForm: FormGroup;
 
   constructor(private router: Router) { }
-  //constructor() { }
 
-  goHome(){
-    this.router.navigate(['']);
-  }
-
-  goAddDisco(){
-    this.router.navigate(['addDisco']);
+  goSearch(){
+    console.log(this.searchForm.value);
+    this.router.navigate(['searchDisco', this.searchForm.value.searchChar]);
   }
 
   ngOnInit() {
+    this.searchForm = new FormGroup({
+       searchChar: new FormControl()
+    });
   }
 
 }

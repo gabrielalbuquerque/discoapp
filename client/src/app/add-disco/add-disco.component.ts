@@ -18,7 +18,6 @@ export class AddDiscoComponent implements OnInit {
   constructor(private discoService: DiscoService) { }
 
   addDisco(){
-    //this.discoService.deleteDisco("1");
     this.discoService.addDisco(this.myform.value);
   }
 

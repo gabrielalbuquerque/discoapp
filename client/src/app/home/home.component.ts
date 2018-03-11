@@ -10,16 +10,24 @@ import {Disco} from '../disco';
 })
 export class HomeComponent implements OnInit {
   discos: Disco[];
-  disco: Disco;
-  name:string;
-  description:string;
+  isSearch: boolean = false;
 
   constructor(private discoService: DiscoService) { }
 
-  ngOnInit() {
+  getDiscos(){
     this.discoService.getDiscos()
       .subscribe(discos =>
       this.discos = discos);
+  }
+
+  searchDiscos(searchChar){
+    this.discoService.searchDiscos(searchChar)
+      .subscribe(discos =>
+        this.discos = discos);
+  }
+
+  ngOnInit() {
+      this.getDiscos();
   }
 
 }

@@ -9,15 +9,25 @@ import { DiscosComponent } from './discos/discos.component';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { AddDiscoComponent } from './add-disco/add-disco.component';
+import { SearchDiscoComponent } from './search-disco/search-disco.component';
 
 const appRoutes: Routes = [
   {
-    path: '',
+    path: 'home',
     component: HomeComponent
   },
   {
     path: 'addDisco',
     component: AddDiscoComponent
+  },
+  {
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full'
+  },
+  {
+    path: 'searchDisco/:searchChar',
+    component: SearchDiscoComponent
   }
 ];
 
@@ -27,7 +37,8 @@ const appRoutes: Routes = [
     DiscosComponent,
     HomeComponent,
     HeaderComponent,
-    AddDiscoComponent
+    AddDiscoComponent,
+    SearchDiscoComponent
   ],
   imports: [
     BrowserModule,
