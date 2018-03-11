@@ -8,6 +8,7 @@
 }
 
 .nav-item-disco {
+  cursor: pointer;
   padding: 18px !important;
 }
 

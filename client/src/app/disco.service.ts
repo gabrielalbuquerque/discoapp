@@ -1,27 +1,28 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable } from 'rxjs/Observable';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Disco } from './disco';
 import 'rxjs/add/operator/map';
+
+
+
 
 @Injectable()
 export class DiscoService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private httpClient: HttpClient) { }
 
   getDiscos(){
-    return this.http.get<Disco[]>('http://localhost:3000/api/getdiscos');
+    return this.httpClient.get<Disco[]>('http://localhost:3000/api/getdiscos');
   }
 
   addDisco(newDisco){
-    /*var headers = new Headers();
-    headers.append('Content-Type', 'application/json');
-    return this.http.post('http://localhost:3000/api/disco', newDisco, {headers:headers})
-      .map((res:Response) => res.json());*/
+    this.httpClient.post<Disco>('http://localhost:3000/api/createdisco/1', newDisco, { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) }).subscribe();
   }
 
   deleteDisco(id){
-    /*return this.http.delete('http://localhost:3000/api/disco'+id)
-      .map((res:Response) => res.json());*/
+    return this.httpClient.delete('http://localhost:3000/api/deletedisco/'+id)
+      .map((res:Response) => res.json());
   }
 
 }

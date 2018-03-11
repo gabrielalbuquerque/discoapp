@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Routes, RouterModule, Router} from '@angular/router';
+import {Routes, RouterModule, Router, RouterLinkActive} from '@angular/router';
 import {DiscoService} from '../disco.service';
 import {Disco} from '../disco';
 
@@ -18,8 +18,8 @@ export class HeaderComponent implements OnInit {
     this.router.navigate(['']);
   }
 
-  goDiscos(){
-    this.router.navigate(['discos']);
+  goAddDisco(){
+    this.router.navigate(['addDisco']);
   }
 
   ngOnInit() {
