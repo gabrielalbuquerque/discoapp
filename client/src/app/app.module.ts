@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { AddDiscoComponent } from './add-disco/add-disco.component';
 import { EditDiscoComponent } from './edit-disco/edit-disco.component';
+import { AddCollectionComponent } from './add-collection/add-collection.component';
 
 const appRoutes: Routes = [
   {
@@ -35,6 +36,10 @@ const appRoutes: Routes = [
   {
     path: 'editDisco/:id',
     component: EditDiscoComponent
+  },
+  {
+    path: 'addDiscoCollection',
+    component: AddCollectionComponent
   }
 ];
 
@@ -44,7 +49,8 @@ const appRoutes: Routes = [
     HomeComponent,
     HeaderComponent,
     AddDiscoComponent,
-    EditDiscoComponent
+    EditDiscoComponent,
+    AddCollectionComponent
   ],
   imports: [
     BrowserModule,

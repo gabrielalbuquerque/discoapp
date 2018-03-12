@@ -25,6 +25,9 @@
         <li class="nav-item-disco nav-item" routerLinkActive="nav-item-disco-active">
           <a class="nav-link" routerLink="/addDisco">Novo Disco</a>
         </li>
+        <li class="nav-item-disco nav-item" routerLinkActive="nav-item-disco-active">
+          <a class="nav-link" routerLink="/addDiscoCollection">Nova Coleção</a>
+        </li>
     </ul>
     <form [formGroup]="searchForm" (ngSubmit)="goSearch()" class="form-inline form-inline-disco my-2 my-lg-0">
       <input formControlName="searchChar" name="searchChar" class="form-control form-disco-header mr-sm-2" type="search" placeholder="Nome do Disco">

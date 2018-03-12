@@ -41,6 +41,29 @@
     background: #E5A !important;
 }
 
+.form-disco-header{
+  border: 0 !important;
+  border-radius: 0 !important;
+}
+
+.form-disco-header:focus{
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.btn-disco{
+  background: #E90 !important;
+  color: white !important;
+  border-radius: 0 !important;
+  border: 0 !important;
+}
+
+.btn-disco:hover{
+  outline: none !important;
+  box-shadow: none !important;
+  background: #E5A !important;
+}
+
 @media (min-width: 992px){
   .navbar-disco{
     padding: 0 !important;

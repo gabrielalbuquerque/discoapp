@@ -2,6 +2,11 @@ var models  = require('../models');
 var express = require('express');
 var router = express.Router();
 
+const errorMsg = "Ocorreu um erro, tente novamente mais tarde.";
+const successAddMsg = "Coleção adicionada com sucesso!";
+const successEditMsg = "Coleção atualizada com sucesso!";
+const successDeleteMsg = "Coleção removida com sucesso!";
+
 // get discocollections
 router.get('/getdiscocollections', function(req, res) {
   models.DiscoCollection.findAll().then(function(discoCollections) {
@@ -15,7 +20,9 @@ router.post('/creatediscocollection', function(req, res){
     name: req.body.name,
     description: req.body.description
   }).then(function() {
-    res.json({msg: 'Coleção adicionada com sucesso!'});
+    res.json({successMsg: successAddMsg});
+  }).catch(function (err) {
+    res.json({errorMsg: errorMsg});
   });
 });
 
@@ -31,7 +38,9 @@ router.post('/updatediscocollection/:id', function(req, res){
           name: req.body.name,
           description: req.body.description,
         }).then(function() {
-          res.json({msg: 'Coleção atualizada com sucesso!'});
+          res.json({successMsg: successEditMsg});
+        }).catch(function (err) {
+          res.json({errorMsg: errorMsg});
         });
     }
   });
@@ -44,7 +53,9 @@ router.delete('/deletediscocollection/:id', function(req, res){
       id: req.params.id
     }
   }).then(function() {
-    res.json({msg: 'Coleção removida com sucesso!'});
+    res.json({successMsg: successDeleteMsg});
+  }).catch(function (err) {
+    res.json({errorMsg: errorMsg});
   });
 });
 module.exports = router;
