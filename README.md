@@ -1,4 +1,4 @@
-# discoapp
+# iBolacha
 
 Aplicação de coleção de discos utilizando Node.js, Express, MySQL e Angular. 
 
@@ -13,16 +13,22 @@ Aplicação de coleção de discos utilizando Node.js, Express, MySQL e Angular.
   Criar banco com o nome "discomanagement"
 
 **Depêndencias**
+
+  No diretório "discoapp" executar os comandos:
   ```
   npm install
   ```
   
  **Migrations**
+ 
+  No diretório "discoapp" executar os comandos:
   ```
   node_modules/.bin/sequelize db:migrate
   ```
   
   **Angular**
+  
+  No diretório "client" executar os comandos:
   ```
   npm install -g @angular/cli
   ng init
