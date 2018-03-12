@@ -9,6 +9,7 @@ Aplicação de coleção de discos utilizando Node.js, Express, MySQL e Angular.
 ## Configurações
 
 **Banco de Dados**
+
   Criar banco com o nome "discomanagement"
 
 **Depêndencias**
