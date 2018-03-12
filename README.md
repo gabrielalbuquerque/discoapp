@@ -36,9 +36,12 @@ Aplicação de coleção de discos utilizando Node.js, Express, MySQL e Angular.
   
   **Angular**
   
-  No diretório "client" executar os comandos:
   ```
   npm install -g @angular/cli
-  ng init
+  ```
+  
+  No diretório "client" executar os comandos:
+   ```
+  npm install
   ng serve
   ```
