@@ -1,0 +1,109 @@
+.lp-side{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: black;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -122px;
+  margin-left: -100px;
+}
+
+.lp-cover{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -50px;
+  margin-top: -71px;
+}
+
+.lp-hole{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -10px;
+  margin-top: -30.5px;
+}
+
+.element-item {
+  position: relative;
+  float: left;
+  width: 250px;
+  height: 250px;
+  padding: 10px;
+  background: #036bda;
+  border: 2px solid;
+  box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+}
+
+.element-item > * {
+  margin: 0;
+  padding: 0;
+}
+
+.element-item:hover .disco-info-container{
+  max-height: 148px;
+   -webkit-transition: max-height 0.25s ease-in;
+  -moz-transition: max-height 0.25s ease-in;
+  -ms-transition: max-height 0.25s ease-in;
+  -o-transition: max-height 0.25s ease-in;
+  transition: max-height 0.25s ease-in;
+}
+
+.disco-info-container{
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #19F;
+  border: 2px solid;
+  box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+  height: 246px;
+  max-height: 246px;
+  -webkit-transition: max-height 0.25s ease-out;
+ -moz-transition: max-height 0.25s ease-out;
+ -ms-transition: max-height 0.25sease-out;
+ -o-transition: max-height 0.25s ease-out;
+ transition: max-height 0.25s ease-out;
+}
+
+.disco-info-sub-container{
+  padding: 20px;
+}
+
+.disco-name-container h3{
+  color: white;
+}
+
+.btn-remove-disco{
+  background: #dc3545 !important;
+}
+
+.btn-edit-disco{
+  background: #8C8 !important;
+}
+
+.btn-edit-disco:hover, .btn-remove-disco:hover{
+  background: #E5A !important;
+}
+
+.btn-container{
+  margin-top: 30px;
+}
+
+.btn-disco{
+  margin-right: 10px;
+}

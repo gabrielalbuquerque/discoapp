@@ -1,10 +1,5 @@
 .navbar-disco{
   background: #8C8;
-  padding: 0 !important;
-}
-
-.navbar-nav-disco{
-  padding-left: 20px !important;
 }
 
 .nav-item-disco {
@@ -18,7 +13,7 @@
 }
 
 .nav-item-disco-active {
-  background: #E5A !important;
+  background: #ED2 !important;
 }
 
 .navbar-brand-disco{
@@ -31,4 +26,32 @@
 
 .navbar-light .navbar-nav-disco .nav-link{
   color: white !important;
+}
+
+.dropdown-menu-disco{
+  border-radius: 0 !important;
+  background: #8C8 !important;
+}
+
+.dropdown-item-disco{
+  color: white !important;
+}
+
+.dropdown-item-disco:hover{
+    background: #E5A !important;
+}
+
+@media (min-width: 992px){
+  .navbar-disco{
+    padding: 0 !important;
+  }
+
+  .navbar-nav-disco{
+    padding-left: 20px !important;
+  }
+
+  .form-inline-disco{
+    padding-right: 50px !important;
+  }
+
 }

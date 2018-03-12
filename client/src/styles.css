@@ -1,6 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
-.form-disco:focus{
-  border-color: #ced4da !important;
+.btn-disco{
+  background: #E90 !important;
+  color: white !important;
+  border-radius: 0 !important;
+  border: 0 !important;
+}
+
+.btn-disco:hover{
+  outline: none !important;
+  box-shadow: none !important;
+  background: #E5A !important;
+}
+
+.form-disco-header{
+  border: 0 !important;
+  border-radius: 0 !important;
+}
+
+.form-disco-header:focus{
   outline: none !important;
   box-shadow: none !important;
 }
@@ -24,57 +41,4 @@
 
 .spacer20{
   margin-top: 20px;
-}
-
-
-/* ---- isotope ---- */
-
-/* ---- .element-item ---- */
-
-.element-item {
-  position: relative;
-  float: left;
-  width: 250px;
-  height: 250px;
-  padding: 10px;
-  background: #888;
-  color: #262524;
-}
-
-.element-item > * {
-  margin: 0;
-  padding: 0;
-}
-
-.element-item .name {
-  position: absolute;
-
-  left: 10px;
-  top: 60px;
-  text-transform: none;
-  letter-spacing: 0;
-  font-size: 12px;
-  font-weight: normal;
-}
-
-.element-item .symbol {
-  position: absolute;
-  left: 10px;
-  top: 0px;
-  font-size: 42px;
-  font-weight: bold;
-  color: white;
-}
-
-.element-item .number {
-  position: absolute;
-  right: 8px;
-  top: 5px;
-}
-
-.element-item .weight {
-  position: absolute;
-  left: 10px;
-  top: 76px;
-  font-size: 12px;
 }

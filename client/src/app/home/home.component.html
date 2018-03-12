@@ -1,10 +1,20 @@
 <div class="grid">
-  <div *ngFor="let disco of discos" class="element-item transition metal" data-category="transition" style="background-image: url('https://picsum.photos/250/250')">
-    <h3 class="name">{{disco.name}}</h3>
-    <p class="symbol">{{disco.id}}</p>
-    <p class="number">80</p>
-    <p class="weight">200.59</p>
-    <button [routerLink]="['/editDisco', disco.id]" class="btn btn-primary">Editar</button>
-    <button (click)="deleteDisco(disco.id, disco)" class="btn btn-primary">Remover</button>
+  <div *ngFor="let disco of discos" class="element-item transition metal" data-category="transition">
+    <div class="lp-container">
+      <div class="lp lp-side"></div>
+      <div class="lp lp-cover"></div>
+      <div class="lp lp-hole"></div>
+    </div>
+    <div class="disco-info-container">
+      <div  class="disco-info-sub-container">
+        <div class="name disco-name-container">
+          <h3>{{disco.name}}</h3>
+        </div>
+        <div class="btn-container">
+          <button [routerLink]="['/editDisco', disco.id]" class="btn btn-disco btn-edit-disco btn-primary">Editar</button>
+          <button (click)="deleteDisco(disco.id, disco)" class="btn btn-disco btn-remove-disco btn-primary">Remover</button>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

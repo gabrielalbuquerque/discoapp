@@ -16,11 +16,9 @@
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Coleções
           </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <!--a class="dropdown-item" href="#">Nova Coleção</a-->
-            <div class="dropdown-divider"></div>
-            <a *ngFor="let discoCollection of discoCollections" [routerLink]="['/collectionFilter', discoCollection.id]" class="dropdown-item">
-              {{discoCollection.name}}
+          <div class="dropdown-menu dropdown-menu-disco" aria-labelledby="navbarDropdown">
+            <a *ngFor="let discoCollection of discoCollections" [routerLink]="['/collectionFilter', discoCollection.id]" class="dropdown-item dropdown-item-disco">
+               {{discoCollection.name}}
             </a>
           </div>
         </li>
@@ -28,9 +26,9 @@
           <a class="nav-link" routerLink="/addDisco">Novo Disco</a>
         </li>
     </ul>
-    <form [formGroup]="searchForm" (ngSubmit)="goSearch()" class="form-inline my-2 my-lg-0">
-      <input formControlName="searchChar" name="searchChar" class="form-control form-disco mr-sm-2" type="search" placeholder="Nome do Disco" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+    <form [formGroup]="searchForm" (ngSubmit)="goSearch()" class="form-inline form-inline-disco my-2 my-lg-0">
+      <input formControlName="searchChar" name="searchChar" class="form-control form-disco-header mr-sm-2" type="search" placeholder="Nome do Disco">
+      <button class="btn-disco btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
     </form>
   </div>
 </nav>
