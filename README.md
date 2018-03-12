@@ -21,9 +21,12 @@ Aplicação de coleção de discos utilizando Node.js, Express, MySQL e Angular.
   
  **Sequelize Migrations**
  
-  No diretório "discoapp" executar os comandos:
   ```
   npm install -g sequelize-cli
+  ```
+ 
+  No diretório "discoapp" executar os comandos:
+  ```
   node_modules/.bin/sequelize db:migrate
   ```
   
@@ -41,7 +44,7 @@ Aplicação de coleção de discos utilizando Node.js, Express, MySQL e Angular.
   ```
   
   No diretório "client" executar os comandos:
-   ```
+  ```
   npm install
   ng serve
   ```
