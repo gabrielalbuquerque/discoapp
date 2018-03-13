@@ -80,20 +80,6 @@
  transition: max-height 0.25s ease-out;
 }
 
-.btn-disco{
-  background: #E90 !important;
-  color: white !important;
-  border-radius: 0 !important;
-  border: 0 !important;
-}
-
-.btn-disco:hover{
-  outline: none !important;
-  box-shadow: none !important;
-  background: #E5A !important;
-}
-
-
 .disco-info-sub-container{
   padding: 20px;
 }
@@ -120,4 +106,6 @@
 
 .btn-disco{
   margin-right: 10px;
+  border-radius: 0 !important;
+  border: 0 !important;
 }
